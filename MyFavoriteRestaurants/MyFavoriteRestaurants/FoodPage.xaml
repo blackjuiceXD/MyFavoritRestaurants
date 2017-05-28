@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFavoriteRestaurants.FoodPage">
+
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Padding="0" Spacing="10">
+        <StackLayout VerticalOptions="FillAndExpand">
+            <ListView x:Name="FoodList" ></ListView>
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Button Clicked="Details" Text="Details" WidthRequest="115"></Button>
+            <Button Clicked="Add" Text="Add Food" WidthRequest="115"></Button>
+            <Button Clicked="Delete" Text="Delete Food" WidthRequest="115"></Button>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

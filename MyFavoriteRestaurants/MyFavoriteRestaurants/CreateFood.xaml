@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFavoriteRestaurants.CreateFood">
+    <StackLayout>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            
+        </Grid.RowDefinitions>
+        <Label Margin="5, 10, 0, 0" Text="Name:" FontSize="20"></Label>
+        <Entry Grid.Column="1" x:Name="FoodName" Placeholder="Name"></Entry>
+
+        <Label Grid.Row="1" Margin="5, 10, 0, 0" Text="Price:" FontSize="20"></Label>
+        <Entry Keyboard="Numeric" Grid.Row="1" Grid.Column="1" x:Name="FoodPrice" Placeholder="Price"></Entry>
+
+        <Label Grid.Row="2" Margin="5, 10, 0, 0" Text="Star Rating:" FontSize="20"></Label>
+        <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+            <Label x:Name="FoodStarRating" Text="" Margin="15"></Label>
+            <Button x:Name="BtnStarRating" Text="Pick Rating" Clicked="BtnStarRating_OnClicked"></Button>
+        </StackLayout>
+        </Grid>
+    <StackLayout HorizontalOptions="CenterAndExpand">
+        <Editor x:Name="FoodDescribe" Text="Describe the Food"></Editor>
+    </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image x:Name="CreateFoodImage"></Image>
+            <StackLayout Grid.Column="1">
+                <Button x:Name="BtnTakePic" Text="Take Pic" Clicked="BtnTakePic_OnClicked"></Button>
+                <Button x:Name="BtnChoosePic" Text="Choose Pic" Clicked="BtnChoosePic_OnClicked"></Button>
+            </StackLayout>
+            <Button Grid.Row="1" x:Name="BtnAddFood" Text="Add Food" Clicked="BtnAddFood_OnClicked"></Button>
+            <Button Grid.Column="1" Grid.Row="1" x:Name="BtnCancel" Text="Cancel" Clicked="BtnCancel_OnClicked"></Button>
+        </Grid>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

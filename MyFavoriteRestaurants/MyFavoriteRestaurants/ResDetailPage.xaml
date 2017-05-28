@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFavoriteRestaurants.ResDetailPage">
+    <StackLayout Orientation="Vertical">
+   <StackLayout HorizontalOptions="Center">
+       <Image x:Name="ResImage"></Image>
+   </StackLayout>
+   <StackLayout Orientation="Horizontal" Margin="5, 30">
+       <Label Text="Address: " FontSize="20"></Label>
+       <Label x:Name="LblAddress" FontSize="20"></Label>
+   </StackLayout>
+        <StackLayout Margin="5, 20">
+            <Label x:Name="LblDescribe" FontSize="18"></Label>
+        </StackLayout>
+   <StackLayout VerticalOptions="EndAndExpand">
+       <Label x:Name="LblWebside" FontSize="20"></Label>
+       <Button x:Name="BtnEdit" Text="Edit" Clicked="BtnEdit_OnClicked"></Button>
+    </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFavoriteRestaurants.ResEdit">
+    <StackLayout Orientation="Vertical">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Margin="5, 10, 0, 0" Text="Name:" FontSize="20"></Label>
+            <Entry Grid.Column="1" x:Name="ResName" Placeholder="Name"></Entry>
+
+            <Label Grid.Row="1" Margin="5, 10, 0, 0" Text="Address:" FontSize="20"></Label>
+            <Entry Grid.Row="1" Grid.Column="1" x:Name="ResAddress" Placeholder="Address"></Entry>
+
+            <Label Grid.Row="2" Margin="5, 10, 0, 0" Text="Webside:" FontSize="20"></Label>
+            <Entry Grid.Row="2" Grid.Column="1" x:Name="ResWebside" Placeholder="Webside"></Entry>
+
+            <Image Grid.Row="3" x:Name="CreateImage"></Image>
+            <StackLayout Grid.Row="3" Grid.Column="1">
+                <Button Text="Take pic" x:Name="BtnTakePic" Clicked="BtnTakePic_OnClicked"></Button>
+                <Button Text="Choose pic" x:Name="BtnChoosePic" Clicked="BtnChoosePic_OnClicked"></Button>
+            </StackLayout>
+        </Grid>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Editor x:Name="ResDescribe" Text="Describe the Restaurant"></Editor>
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <BoxView BackgroundColor="Blue"></BoxView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button Text="Update Restaurant" x:Name="BtnEditRestaurant" Clicked="BtnEditRestaurant_OnClicked"></Button>
+                <Button Grid.Column="1" HorizontalOptions="End" Text="Cancel" x:Name="BtnCancel" Clicked="BtnCancel_OnClicked"></Button>
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

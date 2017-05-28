@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyFavoriteRestaurants.FoodDetailPage">
+    <StackLayout Orientation="Vertical">
+        <StackLayout HorizontalOptions="Center">
+            <Image x:Name="FoodImage"></Image>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="5">
+            <Label Text="Price: " FontSize="20"></Label>
+            <Label x:Name="LblPrice" FontSize="20"></Label>
+        </StackLayout>
+        <StackLayout Margin="5, 30">
+            <Label x:Name="LblDescribe"></Label>
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <StackLayout Orientation="Horizontal" Margin="5">
+                <Image x:Name="StarImage1"></Image>
+                <Image x:Name="StarImage2"></Image>
+                <Image x:Name="StarImage3"></Image>
+                <Image x:Name="StarImage4"></Image>
+                <Image x:Name="StarImage5"></Image>
+            </StackLayout>
+            <Button x:Name="BtnEdit" Text="Edit" Clicked="BtnEdit_OnClicked"></Button>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
